@@ -74,7 +74,7 @@ class AbstractApplication(models.Model):
         max_length=255, blank=True, default=generate_client_secret, db_index=True
     )
     name = models.CharField(max_length=255, blank=True)
-    skip_authorization = models.BooleanField(default=False)
+    skip_authorization = models.BooleanField(default=True)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

@@ -86,7 +86,7 @@ class AuthorizationView(BaseAuthorizationView, FormView):
     validator_class = oauth2_settings.OAUTH2_VALIDATOR_CLASS
     oauthlib_backend_class = oauth2_settings.OAUTH2_BACKEND_CLASS
 
-    skip_authorization_completely = False
+    skip_authorization_completely = True
 
     def get_initial(self):
         # TODO: move this scopes conversion from and to string into a utils function
